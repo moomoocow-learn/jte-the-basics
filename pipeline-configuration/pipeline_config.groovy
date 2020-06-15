@@ -1,4 +1,5 @@
 libraries{
-    gradle
+    //gradle
+    merge = true
     sonarqube
 }
