@@ -9,7 +9,9 @@ pipeline {
             steps {
                 sh 'whoami'
                 echo "PATH=${PATH}"
-                sh 'bash -x ./local-deploy.sh'
+                if (fileExists('./local-deploy.sh')) {
+                    sh 'bash -x ./local-deploy.sh'
+                }
             }
         }
     }
