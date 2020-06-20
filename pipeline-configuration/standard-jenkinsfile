@@ -12,6 +12,8 @@ pipeline {
                 script {
                     if (fileExists('./local-deploy.sh')) {
                         sh 'bash -x ./local-deploy.sh'
+                    } else {
+                        echo "no local-deploy.sh"
                     }
                 }
             }
