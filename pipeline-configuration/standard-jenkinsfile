@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                sh 'env'
+                sh 'echo $PATH'
                 sh './local-deploy.sh'
             }
         }
