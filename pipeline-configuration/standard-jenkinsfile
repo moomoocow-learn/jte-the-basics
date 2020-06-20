@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
          environment {
-               PATH = "~/app:${env.PATH}"
+               PATH = "~/app:/var/lib/jenkins/.nvm/versions/node/v12.18.1/bin:${env.PATH}"
                JAVA_HOME="/var/lib/jenkins/.sdkman/candidates/java/current"
            }        
             steps {
