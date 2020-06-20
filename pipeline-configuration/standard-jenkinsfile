@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'whoami'
+                sh 'export PATH=$PATH:~/app'
                 sh 'echo $PATH'
                 sh './local-deploy.sh'
             }
