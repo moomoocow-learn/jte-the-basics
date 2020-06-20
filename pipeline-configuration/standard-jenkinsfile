@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
          environment {
                PATH = "~/app:${env.PATH}"
+               JAVA_HOME="/var/lib/jenkins/.sdkman/candidates/java/current"
            }        
             steps {
                 sh 'whoami'
